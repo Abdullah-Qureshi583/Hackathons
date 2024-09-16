@@ -1,0 +1,492 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "poppins", sans-serif;
+}
+.bg {
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #35495d;
+  background-image: url(./assets/image.png);
+  z-index: -10; 
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  width: 100vw;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: rgb(244, 237, 237);
+  background-color: #cec9c9;
+  margin: 0;
+  overflow: auto;
+}
+/*============================================ form section =======================================*/
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.main > h1 {
+  margin: 40px 0;
+  font-size: 2.3rem;
+  font-weight: 900;
+}
+
+.container {
+  max-width: 1500px;
+  display: flex;
+  width: 82vw;
+  margin: auto;
+  justify-content: center;
+  gap: 3rem;
+}
+
+section {
+  width: 48%;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-control {
+  width: 100%;
+  margin-top: 5px;
+  background: transparent;
+  border: 1px solid #aba6a6;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid #d0e5ff;
+  outline: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-control input,
+.form-control textarea {
+  background: transparent;
+  outline: none;
+  border: none;
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+}
+
+.form-control.focus {
+  box-shadow: 5px 5px 3px rgba(204, 210, 213, 0.4);
+  border-color: #e3e3e3;
+}
+
+input {
+  color: white;
+  font-size: 1.1rem;
+}
+
+::placeholder,
+textarea {
+  font-size: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: rgb(171, 167, 167);
+}
+
+/* utility classes */
+.text-center {
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.text-secondary {
+  color: #6c757d;
+}
+
+.btn {
+  background-color: #c7ccd2;
+  color: rgb(57, 57, 57);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  background-color: #3e5377;
+  color: white;
+}
+
+.btn-large {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+}
+
+.fa-x {
+  margin-right: 1rem;
+}
+
+@media (max-width: 750px) {
+  .container {
+    display: flex;
+    width: 82vw;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    gap: 3rem;
+  }
+  section {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+}
+
+/*============================================ resume section =======================================*/
+
+.resume {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+  padding-bottom: 15px;
+  align-items: center;
+}
+
+/* resume container */
+.resumeContainer {
+  width: 900px;
+  min-height: 1000px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  box-shadow: 0 35px 55px rgb(0, 0, 0, 0.1);
+  margin: 50px auto 20px;
+  padding: 0;
+}
+
+/* left section */
+.resumeContainer .left {
+  position: relative;
+  background-color: #003147;
+  padding: 40px;
+}
+
+/* first of left  */
+.resume .first {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex-direction: column;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(255, 255, 255, 0.2);
+}
+
+.resume .first .pic {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.resume .first h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.4em;
+  text-transform: uppercase;
+  word-break: break-all;
+}
+
+.resume .first span {
+  font-weight: 200;
+  color: #e8e8e8;
+  font-size: 1.4em;
+}
+
+.resume .first .pic img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.resume .info {
+  padding-top: 30px;
+}
+
+.resume .title {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+
+.resume .info ul {
+  position: relative;
+}
+
+.resume .info ul li {
+  list-style: none;
+  position: relative;
+  margin: 10px 0px;
+}
+
+.resume .info ul li .icon {
+  display: inline-block;
+  width: 30px;
+  font-size: 18px;
+  color: #03a9f4;
+}
+
+.resume .info ul li span {
+  color: #fff;
+  font-weight: 300;
+}
+
+.resume .edu .title {
+  margin-top: 40px;
+}
+
+.resume .edu li {
+  list-style: square;
+  color: #03a9f4;
+  padding: 10px;
+}
+
+.resume .edu li span {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.resume .lang {
+  margin-top: 30px;
+}
+
+.resume .lang li {
+  list-style: square;
+  color: #03a9f4;
+  padding: 10px;
+}
+
+.resume .lang li span {
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+/* about */
+
+.resumeContainer .right {
+  position: relative;
+  background: #ffffff;
+  padding: 40px;
+}
+
+.resume .right .about h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #054969;
+}
+
+.resume .right .about p {
+  color: #333;
+  line-height: 15px;
+  font-size: 16px;
+  line-height: 38px;
+  margin: 12px;
+  letter-spacing: 1px;
+  text-align: justify;
+}
+
+.resume .right .exp h2 {
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #013147;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.resume .exp li {
+  list-style: square;
+  color: #000000;
+  padding: 10px;
+}
+
+.resume #skills li {
+  list-style: square;
+  color: #000000;
+  padding: 10px;
+}
+
+.resume .skls h2 {
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: 750;
+  letter-spacing: 1px;
+  color: #013147;
+}
+
+.squar {
+  color: #101720;
+  font-size: 25px;
+}
+
+.editBtn {
+  font-size: 30px;
+  color: #fff;
+  background-color: #003147;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  line-height: 1;
+  color: #dfdddd;
+}
+
+.hide {
+  display: none;
+}
+
+/* Autofill with transparent background and white text */
+input:-webkit-autofill {
+  background-color: transparent !important; /* Set background to transparent */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Force the background to be transparent */
+  -webkit-text-fill-color: white !important; /* Set the text color to white */
+  transition: background-color 5000s ease-in-out 0s; /* Optional slow transition */
+}
+
+/* Ensure it stays transparent with white text when focused */
+input:-webkit-autofill:focus {
+  background-color: transparent !important; /* Keep background transparent on focus */
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset !important; /* Ensure background remains transparent */
+  -webkit-text-fill-color: white !important; /* Keep text white */
+}
+
+@media (max-width: 1070px) {
+  .resumeContainer {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 820px) {
+  .resume .first .pic {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    display: flex;
+    width: 82vw;
+    flex-direction: column;
+    margin: auto;
+    justify-content: center;
+    gap: 3rem;
+  }
+  section {
+    width: 100%;
+  }
+  h3 {
+    text-align: center;
+  }
+  .resumeContainer {
+    font-size: 13px;
+    min-height: 900px;
+  }
+  .resumeContainer .title {
+    font-size: 16px;
+  }
+
+  .resumeContainer .left {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  .resume .info ul li {
+    margin: 4px 0px;
+  }
+  body .resume .exp li,
+  .resume .lang li,
+  .resume .edu li,
+  .resume #skills li {
+    padding: 4px;
+    font-size: 14px;
+  }
+
+  .resumeContainer {
+    font-size: 10px;
+    width: 80vw;
+    min-height: 800px;
+  }
+  .resumeContainer .title {
+    font-size: 14px;
+  }
+  .resume .first .pic {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 550px) {
+  .resumeContainer {
+    min-height: 650px;
+  }
+  .resume .first .pic {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 480px) {
+  .resumeContainer {
+    min-height: 650px;
+    grid-template-columns: 1fr 4fr;
+  }
+}

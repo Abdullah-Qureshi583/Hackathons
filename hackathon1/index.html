@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="form">
+      <div class="bg"></div>
+      <div class="main">
+        <h1 class="text-center">Resume Generator</h1>
+        <div class="container">
+          <section class="section1">
+            <h3>Personal Information</h3>
+            <div class="form-group">
+              <label for="nameField">Your Name</label>
+              <div class="form-control">
+                <input
+                  type="text"
+                  id="nameField"
+                  placeholder="Enter your full name here"
+                  class=""
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="jobField">Job title</label>
+              <div class="form-control">
+                <input type="text" id="jobField" placeholder="e.g Web Developer" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactField"> Your Contact</label>
+              <div class="form-control">
+                <input type="text" id="contactField" placeholder="e.g 0312--2345678" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="gmailField">Your Gmail</label>
+              <div class="form-control">
+                <input id="gmailField" placeholder="Enter Gmail here" class="" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="imgField">Select your photo</label>
+              <div class="form-control">
+                <input id="imgField" type="file" class="" />
+              </div>
+            </div>
+
+            <h3>Contact Information</h3>
+
+            <div class="form-group">
+              <label for="addressField">Address</label>
+              <div class="form-control">
+                <input
+                  type="text"
+                  id="addressField"
+                  placeholder="e.g xyz, Karachi, Pakistan"
+                  class=""
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="birthField">Date of Birth (D.O.B)</label>
+              <div class="form-control">
+                <input type="date" id="birthField" />
+              </div>
+            </div>
+
+            <div class="form-group" id="ed">
+              <label for="educationField">Education</label>
+              <div class="form-control">
+                <input class="edField" placeholder="e.g GIAIC" />
+              </div>
+              <button class="btn addEdBtn">Add</button>
+            </div>
+
+            <div class="form-group" id="la">
+              <label for="languagesField">Languages</label>
+              <div class="form-control">
+                <input class="laField" placeholder="e.g TypeScript" />
+              </div>
+              <button class="btn addLanBtn">Add</button>
+            </div>
+          </section>
+
+          <section class="section2">
+            <h3>Professional Information</h3>
+            <div class="form-group">
+              <label for="objectiveField">About Yourself</label>
+              <div class="form-control">
+                <textarea
+                  id="objectiveField"
+                  rows="4"
+                  placeholder="Enter a bit about you!"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="experienceField">Work Experience</label>
+
+              <div class="exp">
+                <div class="form-control">
+                  <textarea
+                    class="weField"
+                    rows="3"
+                    placeholder="Enter your Experience (if any!)"
+                  ></textarea>
+                </div>
+              </div>
+              <button class="btn addExpBtn">Add</button>
+            </div>
+
+            <div class="form-group">
+              <label for="skillsField">Professional Skills</label>
+              <div class="skills">
+                <div class="form-control">
+                  <input class="skField" placeholder="Enter here" />
+                </div>
+              </div>
+              <button class="btn addSkBtn">Add</button>
+            </div>
+          </section>
+        </div>
+
+        <div class="gererate">
+          <button class="btn btn-large generateResume">Generate</button>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------------------------------------------------------------------------------------------------------------------------------- -->
+
+    <div class="resume hide" id="">
+      <div class="resumeContainer">
+        <div class="left">
+          <div class="first">
+            <div class="pic">
+              <img id="profileImg" src="" alt="" class="img-fluid myimg" />
+              <!-- <img id="profileImg" src="./assets/profileImg.png" alt="" class="img-fluid myimg" /> -->
+            </div>
+            <h2 id="fullName"></h2>
+            <span id="jobTitle"> </span>
+          </div>
+          <div class="info">
+            <h3 class="title infoHeading"></h3>
+            <ul>
+              <li class="phoneLi hide">
+                <span class="icon"
+                  ><i class="fa fa-phone" aria-hidden="true"></i
+                ></span>
+                <span id="userContact">Phone</span>
+              </li>
+              <li class="gmailLi hide">
+                <span class="icon"
+                  ><i class="fa fa-envelope" aria-hidden="true"></i
+                ></span>
+                <span id="userGmail">Gmail</span>
+              </li>
+              <li class="addressLi hide">
+                <span class="icon"
+                  ><i class="fa-solid fa-location-dot"></i
+                ></span>
+                <span id="userAddress" href="">Address</span>
+              </li>
+              <li class="birthLi hide">
+                <span class="icon"><i class="fa-regular fa-calendar"></i></span>
+                <span id="userBirthday" href="">DOB </span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="edu">
+            <h3 class="title educationHeading"></h3>
+            <ul id="education"></ul>
+          </div>
+
+          <div class="lang">
+            <h3 class="title languageHeading"></h3>
+            <ul id="lan"></ul>
+          </div>
+        </div>
+        <!--the right side -->
+        <div class="right">
+          <div class="about">
+            <h2 class="aboutHeading"></h2>
+            <p id="objectiveT"></p>
+          </div>
+
+          <div class="exp">
+            <h2 class="expHeading"></h2>
+            <ul id="weT"></ul>
+          </div>
+
+          <div class="skls">
+            <h2 class="skillsHeading"></h2>
+            <ul id="skills"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn editBtn">Edit Resume</button>
+      </div>
+    </div>
+    <!-- <script src="./main.js"></script> -->
+    <script type="module" src="./script.js"></script>
+  </body>
+</html>
