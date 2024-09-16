@@ -309,11 +309,10 @@ h3 {
 
 .resume .right .about p {
   color: #333;
-  line-height: 15px;
   font-size: 16px;
-  line-height: 38px;
-  margin: 12px;
-  letter-spacing: 1px;
+  line-height: 20px;
+  margin: 10px;
+  letter-spacing: 0.6px;
   text-align: justify;
 }
 
@@ -448,6 +447,15 @@ input:-webkit-autofill:focus {
   .resumeContainer .left {
     padding: 20px;
   }
+  .resumeContainer .right {
+    padding: 10px;
+  }
+  .resume .right .about p {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 0.4px;
+    word-break: break-all;
+  }
 }
 
 @media (max-width: 650px) {
@@ -473,6 +481,10 @@ input:-webkit-autofill:focus {
   .resume .first .pic {
     width: 100px;
     height: 100px;
+  }
+  .resume .right .about p {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 @media (max-width: 550px) {
