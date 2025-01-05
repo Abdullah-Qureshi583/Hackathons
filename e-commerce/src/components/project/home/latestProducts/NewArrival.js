@@ -1,0 +1,89 @@
+import React from "react";
+import Imagecomponent from "../../Imagecomponent";
+
+const NewArrival = () => {
+  const chairs = [
+    {
+      id: 1,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+    {
+      id: 2,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+    {
+      id: 3,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+    {
+      id: 4,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+    {
+      id: 5,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+    {
+      id: 6,
+      name: "Comfort Handy Craft",
+      price: 42.0,
+      originalPrice: "65.00",
+      imageUrl:
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+    },
+  ];
+
+  return (
+    <div className="">
+      <div className="flex flex-wrap mt-[58px] justify-center gap-6 gap-y-[120px] ">
+        {chairs.slice(0, 6).map((chair) => (
+          <div key={chair.id} className=" group w-full md:w-[46%] lg:w-[30%]">
+            <Imagecomponent
+              imageBg="offWhite"
+              imageSrc="/images/home/latestProducts/newArrival/first.png"
+              buttonPosition="colBottomleft"
+              buttonType="sale"
+              buttonHref="/ds"
+              width="300"
+              height="300"
+              showHover
+            />
+            <div className="flex justify-between items-center mt-4">
+              <div className="text-darkTextBlue">{chair.name}</div>
+              <div className="flex  items-center gap-x-3">
+                <span className="text-sm text-darkTextBlue ">
+                  ${chair.price}
+                </span>
+                <span className=" text-[12px] line-through text-red-500">
+                  ${chair.originalPrice}
+                </span>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default NewArrival;
