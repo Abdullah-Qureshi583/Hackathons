@@ -32,7 +32,7 @@ export default function UniqueFeatures() {
 
         <div className=" relative md:order-2 left- px-4 md:px-0 flex items-center">
           <div className="flex flex-col gap-6">
-            <SecondaryHeading >
+            <SecondaryHeading>
               Unique Features Of leatest & Trending Poducts
             </SecondaryHeading>
             <div className="flex gap-3 flex-col">

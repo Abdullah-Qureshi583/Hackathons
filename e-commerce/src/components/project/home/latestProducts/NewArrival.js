@@ -8,48 +8,42 @@ const NewArrival = () => {
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/first.png",
     },
     {
       id: 2,
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/second.png",
     },
     {
       id: 3,
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/third.png",
     },
     {
       id: 4,
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/fourth.png",
     },
     {
       id: 5,
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/third.png",
     },
     {
       id: 6,
       name: "Comfort Handy Craft",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+      imageUrl: "/images/home/latestProducts/newArrival/first.png",
     },
   ];
 
@@ -60,7 +54,7 @@ const NewArrival = () => {
           <div key={chair.id} className=" group w-full md:w-[46%] lg:w-[30%]">
             <Imagecomponent
               imageBg="offWhite"
-              imageSrc="/images/home/latestProducts/newArrival/first.png"
+              imageSrc={chair.imageUrl}
               buttonPosition="colBottomleft"
               buttonType="sale"
               buttonHref="/ds"

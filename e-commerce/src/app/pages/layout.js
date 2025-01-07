@@ -7,8 +7,7 @@ const PagesLayout = ({ children }) => {
   return (
     <>
       <ShowPathName />
-      <div className="container mx-auto p-4 max-w-[1180px] ">
-        <FilterProducts />
+      <div className=" ">
         {children}
         <ImageAutoSlider />
       </div>

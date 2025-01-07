@@ -21,7 +21,7 @@ export default function LatestBlogs() {
       title: "Top essential Trends in 2021",
       description:
         "More off this less hello samlande lied much over tightly circa horse taped mightly",
-      image: "/images/home/latestBlogs/image1.png", // Replace with actual image path
+      image: "/images/home/latestBlogs/image2.png", // Replace with actual image path
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ export default function LatestBlogs() {
       title: "Top essential Trends in 2021",
       description:
         "More off this less hello samlande lied much over tightly circa horse taped mightly",
-      image: "/images/home/latestBlogs/image1.png", // Replace with actual image path
+      image: "/images/home/latestBlogs/image3.png", // Replace with actual image path
     },
   ];
 
@@ -47,7 +47,7 @@ export default function LatestBlogs() {
               alt={post.title}
               width={370}
               height={255}
-              className="w-full h-48 object-cover"
+              className="w-full object-cover"
             />
             <div className="p-4 flex flex-col gap-8">
               <div className="text-sm text-gray-500 flex items-center space-x-8">

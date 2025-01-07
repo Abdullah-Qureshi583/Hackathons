@@ -1,7 +1,8 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Button } from "../ui/button";
 import Link from "next/link";
-
+const linkClass =
+  "hover:scale-x-105 hover:text-pPink text-center md:text-start duration-300";
 const Column = ({ title, links }) => {
   return (
     <div className="flex flex-col  items-center md:items-start gap-6 md:gap-10">
@@ -10,11 +11,7 @@ const Column = ({ title, links }) => {
       </h4>
       <ul className=" flex flex-col gap-3 md:gap-5 ">
         {links.map((link, index) => (
-          <Link
-            className="hover:scale-x-105 text-center md:text-start duration-300 "
-            href="#"
-            key={index}
-          >
+          <Link className={linkClass} href="#" key={index}>
             {link}
           </Link>
         ))}
@@ -41,16 +38,10 @@ export default function Footer() {
               Search
             </Button>
           </div>
-          <Link
-            href="/"
-            className="hover:scale-x-105 text-center md:text-start duration-300 mt-6"
-          >
+          <Link href="/" className={` ${linkClass} mt-6`}>
             Contact Info
           </Link>
-          <Link
-            href="/"
-            className="hover:scale-x-105 text-center md:text-start duration-300 mt-2.5"
-          >
+          <Link href="/" className={` ${linkClass} mt-2.5`}>
             17 Princess Road, London, Greater London NW1 8JR, UK
           </Link>
         </div>
@@ -108,14 +99,6 @@ export default function Footer() {
                 <Icon className="text-white size-3" />
               </Link>
             ))}
-
-            <a
-              target="_blank"
-              href="#"
-              className="text-purple-600 hover:text-purple-800"
-            >
-              <i className="fab fa-instagram"></i>
-            </a>
           </div>
         </div>
       </div>

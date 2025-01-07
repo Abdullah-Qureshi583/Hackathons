@@ -74,7 +74,7 @@ const Header = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Link href="#" className="flex items-center ">
+            <Link href="/pages/myAccount" className="flex items-center ">
               Login
               <FiUser className="ml-1" />
             </Link>
@@ -82,7 +82,7 @@ const Header = () => {
               Wishlist
               <CiHeart className="ml-1" />
             </Link>
-            <Link href="#" className="flex items-center ">
+            <Link href="/pages/shoppingCart" className="flex items-center ">
               <FaShoppingCart className="ml-1" />
             </Link>
           </div>

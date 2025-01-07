@@ -1,11 +1,14 @@
+"use client"
 import ProductFilterSidebar from "@/components/project/ProductFilterSidebar";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { CiHeart } from "react-icons/ci";
 import { FiShoppingCart } from "react-icons/fi";
 import { HiMagnifyingGlassPlus } from "react-icons/hi2";
 
 export default function Home() {
+  const router = useRouter();
   const cardData = [
     {
       image: "/images/home/latestBlogs/image1.png",
@@ -17,6 +20,7 @@ export default function Home() {
       colors: ["#FF0000", "#FFFF00", "#0000FF"],
       rating: 4,
       reviews: [],
+      href: "/pages/productDetail"
     },
     {
       image: "/images/home/latestBlogs/image1.png",
@@ -28,6 +32,7 @@ export default function Home() {
       colors: ["#FF5733", "#33FF57", "#3357FF"],
       rating: 5,
       reviews: [],
+      href: "/pages/productDetail"
     },
     {
       image: "/images/home/latestBlogs/image1.png",
@@ -39,6 +44,7 @@ export default function Home() {
       colors: ["#FF0000", "#FFFF00", "#0000FF"],
       rating: 4,
       reviews: [],
+      href: "/pages/productDetail"
     },
     {
       image: "/images/home/latestBlogs/image1.png",
@@ -50,15 +56,18 @@ export default function Home() {
       colors: ["#FFC0CB", "#FFD700", "#800080"],
       rating: 3,
       reviews: [],
+      href: "/pages/productDetail"
     },
   ];
 
   return (
-    <div className="flex gap-3">
-        <ProductFilterSidebar />
+    <div className="container mx-auto p-4 max-w-[1180px] flex gap-3">
+      <ProductFilterSidebar />
+
       <div className="space-y-5">
         {cardData.map((card, index) => (
           <div
+            onClick={() => router.push(card.href)}
             key={index}
             className="flex flex-col md:flex-row w-[313px] md:w-full mx-auto items-center  p-4 gap-6"
           >

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IoGrid } from "react-icons/io5";
 
@@ -9,10 +10,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { FaListUl } from "react-icons/fa";
+import { useRouter } from "next/navigation";
 
 const FilterProducts = () => {
+  const router = useRouter();
   return (
-    <div className="flex  mb-16 mt-32 flex-col items-start gap-5 xl:flex-row md:justify-between  w-full xl:items-center  ">
+    <div className="container mx-auto p-4 max-w-[1180px] flex  mb-16 flex-col items-start gap-5 xl:flex-row md:justify-between  w-full xl:items-center  ">
       <div>
         <h1 className="text-2xl font-bold text-darkTextBlue">
           Ecommerce Acceories & Fashion item
@@ -54,10 +57,18 @@ const FilterProducts = () => {
             View:
           </label>
           <div className="flex gap-2">
-            <button className="" aria-label="Grid View">
+            <button
+              onClick={() => router.push("/pages/shopGridDefault")}
+              className=""
+              aria-label="Grid View"
+            >
               <IoGrid />
             </button>
-            <button className="" aria-label="List View">
+            <button
+              onClick={() => router.push("/pages/shopList")}
+              className=""
+              aria-label="List View"
+            >
               <FaListUl />
             </button>
           </div>

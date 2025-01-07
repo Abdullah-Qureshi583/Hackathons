@@ -6,21 +6,25 @@ const items = [
     id: 1,
     name: "Mini LCW Chair",
     price: "$56.00",
+    imageUrl: "/images/home/trendingProducts/first.png",
   },
   {
     id: 2,
     name: "Eames Lounge Chair",
     price: "$4,500.00",
+    imageUrl: "/images/home/trendingProducts/second.png",
   },
   {
     id: 3,
     name: "Barcelona Chair",
     price: "$3,200.00",
+    imageUrl: "/images/home/trendingProducts/third.png",
   },
   {
     id: 4,
     name: "Panton Chair",
     price: "$300.00",
+    imageUrl: "/images/home/trendingProducts/second.png",
   },
 ];
 const TopCategories = () => {
@@ -37,7 +41,7 @@ const TopCategories = () => {
               <div className="w-full h-full rounded-full  bg-chairBgOffWhite group-hover:translate-x-2 group-hover:-translate-y-2 group-hover:bg-white  overflow-hidden aspect-square">
                 <Imagecomponent
                   imageBg="offWhite"
-                  imageSrc="/images/home/featuredProducts/first.png"
+                  imageSrc={item.imageUrl}
                   buttonPosition="rowTopLeft"
                   buttonType="viewShop"
                   buttonHref="/ds"

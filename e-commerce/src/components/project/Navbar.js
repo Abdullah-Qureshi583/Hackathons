@@ -30,16 +30,16 @@ const Navbar = () => {
                 Home
               </Link>
               <Link
-                href="/pages/shopGridDefault"
+                href="/"
                 className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
               >
                 Pages
               </Link>
               <Link
-                href="#"
+                href="/pages/shopGridDefault"
                 className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
               >
-                Services
+                Products
               </Link>
               <Link
                 href="#"

@@ -13,6 +13,7 @@ const chairs = [
     price: 49.99,
     code: "C1G",
     colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/first.png",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ const chairs = [
     name: "Chair 2",
     price: 59.99,
     colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/second.png",
   },
   {
     id: 3,
@@ -27,6 +29,7 @@ const chairs = [
     name: "Chair 3",
     price: 69.99,
     colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/third.png",
   },
   {
     id: 4,
@@ -35,13 +38,75 @@ const chairs = [
     price: 79.99,
     code: "C4R",
     colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/fourth.png",
   },
   {
     id: 5,
+    code: "ide",
+    name: "Chair 1",
+    price: 49.99,
+    code: "C1G",
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/first.png",
+  },
+  {
+    id: 6,
+    code: "ide",
+    name: "Chair 2",
+    price: 59.99,
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/second.png",
+  },
+  {
+    id: 7,
+    code: "ide",
+    name: "Chair 3",
+    price: 69.99,
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/third.png",
+  },
+  {
+    id: 8,
     code: "bfsag",
     name: "Chair 4",
     price: 79.99,
+    code: "C4R",
     colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/fourth.png",
+  },
+  {
+    id: 9,
+    code: "ide",
+    name: "Chair 1",
+    price: 49.99,
+    code: "C1G",
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/first.png",
+  },
+  {
+    id: 10,
+    code: "ide",
+    name: "Chair 2",
+    price: 59.99,
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/second.png",
+  },
+  {
+    id: 11,
+    code: "ide",
+    name: "Chair 3",
+    price: 69.99,
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/third.png",
+  },
+  {
+    id: 12,
+    code: "bfsag",
+    name: "Chair 4",
+    price: 79.99,
+    code: "C4R",
+    colors: ["bg-lineGreen", "bg-pPink", "bg-darkTextBlue"],
+    src: "/images/home/featuredProducts/fourth.png",
   },
 ];
 
@@ -98,7 +163,7 @@ function FeaturedProducts() {
           >
             <Imagecomponent
               imageBg="lightPurple"
-              imageSrc="/images/home/featuredProducts/first.png"
+              imageSrc={chair.src}
               buttonPosition="rowTopLeft"
               buttonType="viewDetail"
               buttonHref="/ds"

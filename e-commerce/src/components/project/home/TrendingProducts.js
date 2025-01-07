@@ -45,7 +45,7 @@ const TrendingProducts = () => {
       price: 42.0,
       originalPrice: "65.00",
       imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+        "/images/home/trendingProducts/first.png",
     },
     {
       id: 2,
@@ -53,7 +53,7 @@ const TrendingProducts = () => {
       price: 42.0,
       originalPrice: "65.00",
       imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+        "/images/home/trendingProducts/second.png",
     },
     {
       id: 3,
@@ -61,7 +61,7 @@ const TrendingProducts = () => {
       price: 42.0,
       originalPrice: "65.00",
       imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+        "/images/home/trendingProducts/third.png",
     },
     {
       id: 4,
@@ -69,7 +69,7 @@ const TrendingProducts = () => {
       price: 42.0,
       originalPrice: "65.00",
       imageUrl:
-        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-C_UAhXq9GfuGO452EEzfbKnh1viQB9EDBQ&s",
+        "/images/home/trendingProducts/first.png",
     },
   ];
 
@@ -86,7 +86,7 @@ const TrendingProducts = () => {
           >
             <Imagecomponent
               imageBg="offWhite"
-              imageSrc="/images/home/latestProducts/newArrival/first.png"
+              imageSrc={chair.imageUrl}
               width="171"
               height="171"
             />

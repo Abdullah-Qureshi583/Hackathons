@@ -1,128 +1,174 @@
 import React from "react";
-
+const Heading = ({ children }) => {
+  return (
+    <h5 className="text-[22px] font-semibold text-darkTextBlue underline underline-offset-4">
+      {children}
+    </h5>
+  );
+};
 const ProductFilterSidebar = () => {
   return (
-    <div className="w-80 bg-white p-6 shadow-md rounded-lg">
+    <div className="text-nowrap bg-white p-6 shadow-md rounded-lg flex flex-col gap-11">
       {/* Product Brand */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Product Brand
-        </h2>
-        <ul className="space-y-1">
-          <li>
-            <input type="checkbox" id="brand1" />{" "}
-            <label htmlFor="brand1">Golden Source</label>
-          </li>
-          <li>
-            <input type="checkbox" id="brand2" />{" "}
-            <label htmlFor="brand2">Cocoon Studio</label>
-          </li>
-          <li>
-            <input type="checkbox" id="brand3" />{" "}
-            <label htmlFor="brand3">Single Digital Style</label>
-          </li>
-          <li>
-            <input type="checkbox" id="brand4" />{" "}
-            <label htmlFor="brand4">Simple Fast Supply</label>
-          </li>
-          <li>
-            <input type="checkbox" id="brand5" />{" "}
-            <label htmlFor="brand5">Grand Union Shop</label>
-          </li>
-        </ul>
-      </div>
+      <div className="flex flex-col gap-5">
+        <Heading>Product Brand</Heading>
 
-      {/* Contact Info */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Contact Info
-        </h2>
-        <ul className="space-y-1">
-          <li>112 N Main Street</li>
-          <li>Los Angeles</li>
-          <li>+1 987 654 3210</li>
-        </ul>
-      </div>
-
-      {/* Rating */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Rating Level
-        </h2>
-        <ul className="space-y-1">
-          {[5, 4, 3, 2, 1].map((star) => (
-            <li key={star} className="flex items-center">
-              {"★".repeat(star)}
+        <ul className="flex flex-col gap-2">
+          {[
+            "Coaster Furniture",
+            "Fusion Dot High Fashion",
+            "Unique Furnitture Restor",
+            "Dream Furnitture Flipping",
+            "Young Repurposed",
+            "Green DIY furniture",
+          ].map((label) => (
+            <li key={label}>
+              <input
+                type="checkbox"
+                className="text-red-500 accent-purple-400 size-4"
+                id={label}
+              />{" "}
+              <label htmlFor={label} className="text-subText">
+                {label}
+              </label>
             </li>
           ))}
         </ul>
       </div>
 
+      {/* Contact Info */}
+      <div className="flex flex-col gap-5">
+        <Heading>Discount Offer</Heading>
+
+        <ul className="flex flex-col gap-2">
+          {["20% Cashback", "5% Cashback Offer", "25% Discount Offer"].map(
+            (label) => (
+              <li key={label}>
+                <input
+                  type="checkbox"
+                  className="text-red-500 accent-pPink size-4"
+                  id={label}
+                />{" "}
+                <label htmlFor={label} className="text-subText">
+                  {label}
+                </label>
+              </li>
+            )
+          )}
+        </ul>
+      </div>
+
+      {/* Rating */}
+      <div className="flex flex-col gap-2">
+        <Heading>Rating Item</Heading>
+        {[
+          { stars: 4, votes: 1726 },
+          { stars: 3, votes: 258 },
+          { stars: 2, votes: 256 },
+          { stars: 2, votes: 25 },
+        ].map((rating, index) => (
+          <div key={index} className="flex  items-center gap-1">
+            {/* Checkbox */}
+            <input type="checkbox" className={`size-4 accent-yellow-300 `} />
+
+            {/* Stars */}
+            <div className="flex items-center space-x-1">
+              {[...Array(rating.stars)].map((_, i) => (
+                <span key={i} className="text-yellow-500 ">
+                  &#9733;
+                </span>
+              ))}
+              {[...Array(5 - rating.stars)].map((_, i) => (
+                <span key={i} className="text-subText">
+                  &#9733;
+                </span>
+              ))}
+            </div>
+
+            {/* Votes */}
+            <span className="text-subText">({rating.votes})</span>
+          </div>
+        ))}
+      </div>
+
       {/* Categories */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Categories
-        </h2>
-        <ul className="space-y-1">
-          <li>
-            <input type="checkbox" id="category1" />{" "}
-            <label htmlFor="category1">Fashion</label>
-          </li>
-          <li>
-            <input type="checkbox" id="category2" />{" "}
-            <label htmlFor="category2">Electronics</label>
-          </li>
-          <li>
-            <input type="checkbox" id="category3" />{" "}
-            <label htmlFor="category3">Home & Kitchen</label>
-          </li>
-          <li>
-            <input type="checkbox" id="category4" />{" "}
-            <label htmlFor="category4">Books</label>
-          </li>
-          <li>
-            <input type="checkbox" id="category5" />{" "}
-            <label htmlFor="category5">Beauty</label>
-          </li>
+      <div className="flex flex-col gap-5">
+        <Heading>Categories</Heading>
+
+        <ul className="flex flex-col gap-2">
+          {[
+            "Prestashop",
+            "Magento",
+            "Bigcommerce",
+            "osCommerce",
+            "3dcart",
+            "Bags",
+            "Accessories",
+            "Jewellery",
+            "Watches",
+          ].map((label) => (
+            <li key={label}>
+              <input
+                type="checkbox"
+                className=" accent-pPink size-4"
+                id={label}
+              />{" "}
+              <label htmlFor={label} className="text-subText">
+                {label}
+              </label>
+            </li>
+          ))}
         </ul>
       </div>
 
       {/* Price Range */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Price Range
-        </h2>
-        <ul className="space-y-1">
-          <li>
-            <input type="radio" name="price" id="price1" />{" "}
-            <label htmlFor="price1">$0 - $50</label>
-          </li>
-          <li>
-            <input type="radio" name="price" id="price2" />{" "}
-            <label htmlFor="price2">$50 - $100</label>
-          </li>
-          <li>
-            <input type="radio" name="price" id="price3" />{" "}
-            <label htmlFor="price3">$100 - $200</label>
-          </li>
-          <li>
-            <input type="radio" name="price" id="price4" />{" "}
-            <label htmlFor="price4">$200+</label>
-          </li>
+      <div className="flex flex-col gap-5">
+        <Heading>Price Filter</Heading>
+
+        <ul className="flex flex-col gap-2">
+          {[
+            "$0.00 - $150.00",
+            "$150.00 - $350.00",
+            "$150.00 - $504.00",
+            "$450.00 +",
+          ].map((label) => (
+            <li className="" key={label}>
+              <input
+                type="checkbox"
+                className=" accent-pPink size-4"
+                id={label}
+              />{" "}
+              <label htmlFor={label} className="text-subText">
+                {label}
+              </label>
+            </li>
+          ))}
         </ul>
+        <input
+          type="text"
+          name=""
+          placeholder="$10.00 - 20000$"
+          className="text-subText border p-1"
+          id=""
+        />
       </div>
 
       {/* Color Filter */}
-      <div className="mb-6">
-        <h2 className="text-lg font-semibold text-purple-700 mb-2">
-          Filter By Color
-        </h2>
-        <div className="flex space-x-2">
-          <div className="w-6 h-6 bg-red-500 rounded-full"></div>
-          <div className="w-6 h-6 bg-blue-500 rounded-full"></div>
-          <div className="w-6 h-6 bg-green-500 rounded-full"></div>
-          <div className="w-6 h-6 bg-yellow-500 rounded-full"></div>
-          <div className="w-6 h-6 bg-purple-500 rounded-full"></div>
+      <div className="flex flex-col gap-5">
+        <Heading>Filter By Color</Heading>
+        <div className="flex justify-between gap-y-5 flex-wrap">
+          {["red", "blue", "brown", "green", "purple", "sky"].map((color) => (
+            <div key={color} className="flex items-center gap-1 w-[33%]">
+              <div
+                className={`w-4 h-4 bg-${color}-500 ${
+                  color == "brown" && "bg-red-300"
+                } rounded-full `}
+              ></div>
+              <span className="text-base text-subText">
+                {color.charAt(0).toUpperCase() + color.slice(1)}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </div>

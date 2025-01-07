@@ -3,7 +3,7 @@ import React from 'react'
 
 const shopGridDefault = () => {
   return (
-    <div>
+    <div className='container mx-auto p-4 max-w-[1180px]'>
       <ShopGridDefault />
     </div>
   )
