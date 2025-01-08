@@ -3,6 +3,7 @@ import Imagecomponent from "../Imagecomponent";
 import PrimaryHeading from "../PrimaryHeading";
 import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const LSCard = ({
   title,
@@ -38,38 +39,43 @@ const LSCard = ({
 };
 
 const TrendingProducts = () => {
+  const router = useRouter();
   const chairs = [
     {
       id: 1,
       name: "Cantilever chair",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "/images/home/trendingProducts/first.png",
+      imageUrl: "/images/home/trendingProducts/first.png",
+
+      href: "/pages/productDetail",
     },
     {
       id: 2,
       name: "Cantilever chair",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "/images/home/trendingProducts/second.png",
+      imageUrl: "/images/home/trendingProducts/second.png",
+
+      href: "/pages/productDetail",
     },
     {
       id: 3,
       name: "Cantilever chair",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "/images/home/trendingProducts/third.png",
+      imageUrl: "/images/home/trendingProducts/third.png",
+
+      href: "/pages/productDetail",
     },
     {
       id: 4,
       name: "Cantilever chair",
       price: 42.0,
       originalPrice: "65.00",
-      imageUrl:
-        "/images/home/trendingProducts/first.png",
+      imageUrl: "/images/home/trendingProducts/first.png",
+
+      href: "/pages/productDetail",
     },
   ];
 
@@ -81,6 +87,7 @@ const TrendingProducts = () => {
       <div className="flex flex-wrap mt-[58px]   w-full justify-center gap-6  ">
         {chairs.map((chair) => (
           <div
+            onClick={() => router.push(chair.href)}
             key={chair.id}
             className=" group p-3 shadow-sm w-full md:w-[30%] lg:w-[22%]  "
           >

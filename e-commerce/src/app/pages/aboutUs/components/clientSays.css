@@ -1,0 +1,23 @@
+/* to style the dot of the slider */
+.slick-dots li {
+  width: 28px !important;
+  padding: 0px !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: var(--pPink) !important;
+  transform: scale(1.6) !important ;
+  transition-duration: 300ms;
+}
+
+.slick-dots li button:before {
+  top: 230px !important;
+  color: var(--pPink) !important;
+  content: "" !important;
+  border: 2px solid var(--pPink) !important;
+  font-size: 0 !important;
+  width: 20px !important;
+  height: 0px !important;
+  border-radius: 50px !important;
+  display: block !important;
+}

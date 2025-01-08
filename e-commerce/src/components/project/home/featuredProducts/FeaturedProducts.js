@@ -166,7 +166,7 @@ function FeaturedProducts() {
               imageSrc={chair.src}
               buttonPosition="rowTopLeft"
               buttonType="viewDetail"
-              buttonHref="/ds"
+              buttonHref="/pages/productDetail"
               width="177"
               height="177"
               showHover

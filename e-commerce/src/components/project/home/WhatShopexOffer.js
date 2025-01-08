@@ -2,10 +2,10 @@ import Image from "next/image";
 import React from "react";
 import PrimaryHeading from "../PrimaryHeading";
 
-const WhatShopexOffer = () => {
+const WhatShopexOffer = ({ title = "What Shopex Offer!" }) => {
   return (
     <div className="flex flex-col items-center mt-[60px]">
-      <PrimaryHeading>What Shopex Offer!</PrimaryHeading>
+      <PrimaryHeading>{title}</PrimaryHeading>
 
       <div className="flex gap-x-5 flex-wrap justify-center">
         {[

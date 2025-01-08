@@ -2,7 +2,7 @@ import PinkButton from "@/components/project/PinkButton";
 import Image from "next/image";
 import React from "react";
 
-const Left = ({ cartItems }) => {
+const ShoppingCartLeft = ({ cartItems }) => {
   return (
     <div className="flex-grow">
       <div className="overflow-x-auto">
@@ -56,4 +56,4 @@ const Left = ({ cartItems }) => {
   );
 };
 
-export default Left;
+export default ShoppingCartLeft;

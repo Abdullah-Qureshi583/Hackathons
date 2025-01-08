@@ -1,7 +1,8 @@
 import PinkButton from "@/components/project/PinkButton";
+import Link from "next/link";
 import React from "react";
 
-const SubTotalsCard = () => {
+const CalculateShippingCard = () => {
   return (
     <div className="bg-dblLightPurple  w-full">
       <div className="flex flex-col w-full p-8">
@@ -18,10 +19,12 @@ const SubTotalsCard = () => {
           <div className="w-full mt-2 h-[1px] bg-subText "></div>
         </div>
 
-        <PinkButton>Calculate Shipping</PinkButton>
+        <Link href="/pages/calculateShipping" className="">
+          <PinkButton>Calculate Shipping</PinkButton>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default SubTotalsCard;
+export default CalculateShippingCard;

@@ -42,7 +42,19 @@ const Navbar = () => {
                 Products
               </Link>
               <Link
-                href="#"
+                href="/pages/blogs"
+                className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/pages/aboutUs"
+                className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
+              >
+                About
+              </Link>
+              <Link
+                href="/pages/contactUs"
                 className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
               >
                 Contact
