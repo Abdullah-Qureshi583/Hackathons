@@ -35,7 +35,7 @@ export default function ShowImage() {
           <Image
             width={375}
             height={487}
-            src="/images/productD/mainBag.png"  
+            src="/images/productD/mainBag.png"
             alt="Main product"
             className="object-cover rounded-md"
           />
