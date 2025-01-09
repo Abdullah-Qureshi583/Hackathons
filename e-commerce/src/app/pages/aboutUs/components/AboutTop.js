@@ -1,6 +1,7 @@
 import PinkButton from "@/components/project/PinkButton";
 import SecondaryHeading from "@/components/project/SecondaryHeading";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const AboutTop = () => {
@@ -30,7 +31,9 @@ const AboutTop = () => {
           quis bibendum quam.
         </p>
         <div className="mt-16">
-          <PinkButton>Contact us</PinkButton>
+          <Link href="/pages/contactUs">
+            <PinkButton>Contact us</PinkButton>
+          </Link> 
         </div>
       </div>
     </div>

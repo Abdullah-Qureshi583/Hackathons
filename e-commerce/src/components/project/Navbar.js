@@ -29,12 +29,7 @@ const Navbar = () => {
               >
                 Home
               </Link>
-              <Link
-                href="/"
-                className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
-              >
-                Pages
-              </Link>
+
               <Link
                 href="/pages/shopGridDefault"
                 className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
@@ -58,6 +53,12 @@ const Navbar = () => {
                 className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
               >
                 Contact
+              </Link>
+              <Link
+                href="/pages/faq"
+                className="hover:text-pPink hover:scale-x-105 hover:font-semibold duration-300"
+              >
+                FAQ
               </Link>
             </div>
           </div>

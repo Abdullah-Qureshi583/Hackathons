@@ -25,9 +25,9 @@ const ContactUs = () => {
         {/* Right Section */}
         <div className="flex flex-col gap-y-7">
           <SecondaryHeading>Contact Way</SecondaryHeading>
-          <div className=" grid grid-cols-2 gap-y-10 text-gray-500">
+          <div className=" grid grid-cols-1 lg:grid-cols-2 gap-y-10 text-gray-500">
             <div className="flex gap-3">
-              <div className="rounded-full bg-[#5726DF] size-[45px] "></div>
+              <div className="rounded-full bg-[#5726DF] size-[30px] aspect-square lg:size-[45px] "></div>
               <div className="flex flex-col text-subText">
                 <p>
                   Tel: <span className="ml-1"> 877-67-88-99 </span>
@@ -38,21 +38,21 @@ const ContactUs = () => {
               </div>
             </div>
             <div className="flex gap-3">
-              <div className="rounded-full bg-pPink size-[45px] "></div>
+              <div className="rounded-full bg-pPink size-[30px] aspect-square lg:size-[45px] "></div>
               <div className="flex flex-col text-subText">
                 <p>Support Forum </p>
                 <p>For over 24hr</p>
               </div>
             </div>
             <div className="flex gap-3">
-              <div className="rounded-full bg-[#FFB265] size-[45px] "></div>
+              <div className="rounded-full bg-[#FFB265] size-[30px] aspect-square lg:size-[45px] "></div>
               <div className="flex flex-col text-subText">
                 <p>20 Margaret st, London </p>
                 <p>20 Margaret st, London</p>
               </div>
             </div>
             <div className="flex gap-3">
-              <div className="rounded-full bg-[#1BE982] size-[45px] "></div>
+              <div className="rounded-full bg-[#1BE982] size-[30px] aspect-square lg:size-[45px] "></div>
               <div className="flex flex-col text-subText">
                 <p>Free standard shipping </p>
                 <p>on all orders.</p>
